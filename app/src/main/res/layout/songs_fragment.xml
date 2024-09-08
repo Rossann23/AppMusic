@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/songFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Asegúrate de que el RadioGroup tenga restricciones adecuadas -->
+    <RadioGroup
+        android:id="@+id/radioGrupo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        tools:layout_editor_absoluteY="147dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGrupo1"
+        tools:layout_editor_absoluteX="98dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutBotones1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar1">
+
+        <Button
+            android:id="@+id/btnAtras1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="atras"
+            android:text="⏮︎"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnPlay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="reproducir"
+            android:text="▶"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btnSiguiente1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="siguiente"
+            android:text="⏭︎"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Pantalla1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pantalla 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutBotones1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="411dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="671dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
